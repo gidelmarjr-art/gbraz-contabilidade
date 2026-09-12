@@ -8,7 +8,7 @@ import { Reveal } from "../ui/Reveal";
  * horário com as informações reais do escritório.
  */
 const CONTACT_INFO = [
-  { icon: Phone, label: "(61) 0000-0000", href: "tel:+556100000000" },
+  { icon: Phone, label: "(99) 98438-1575", href: "tel:+556100000000" },
   {
     icon: Mail,
     label: "contato@gbrazcontabilidade.com.br",
