@@ -18,7 +18,7 @@ const FAQS = [
   {
     question: "Como funciona a comunicação no dia a dia?",
     answer:
-      "Você tem um canal direto com o time responsável pela sua conta — sem centrais de atendimento genéricas. Dúvidas rápidas são respondidas por WhatsApp ou e-mail.",
+      "Você tem um canal direto com o time responsável pela sua conta sem centrais de atendimento genéricas. Dúvidas rápidas são respondidas por WhatsApp ou e-mail.",
   },
   {
     question: "Quais documentos preciso enviar todo mês?",

@@ -84,7 +84,7 @@ export function Hero() {
           variants={item}
           className="mt-7 max-w-xl text-lg leading-relaxed text-cream-dim"
         >
-          A G Braz cuida da contabilidade da sua empresa com precisão técnica
+          A GBraz cuida da contabilidade da sua empresa com precisão técnica
           e acompanhamento próximo, para você crescer sem surpresas.
         </motion.p>
 

@@ -9,7 +9,7 @@ import { Reveal } from "../ui/Reveal";
 const TESTIMONIALS = [
   {
     quote:
-      "Desde que fechamos com a G Braz, deixamos de correr atrás de prazo. Eles avisam antes da gente perguntar.",
+      "Desde que fechamos com a GBraz, deixamos de correr atrás de prazo. Eles avisam antes da gente perguntar.",
     name: "Cliente exemplo",
     role: "Comércio varejista",
   },
@@ -21,7 +21,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Migramos de outro escritório e a diferença no atendimento foi imediata — respostas rápidas e diretas.",
+      "Migramos de outro escritório e a diferença no atendimento foi imediata respostas rápidas e diretas.",
     name: "Cliente exemplo",
     role: "Indústria de pequeno porte",
   },
@@ -34,7 +34,7 @@ export function Testimonials() {
         <Reveal>
           <SectionHeading
             eyebrow="Depoimentos"
-            title="O que dizem os clientes que confiam na G Braz."
+            title="O que dizem os clientes que confiam na GBraz."
             align="center"
           />
         </Reveal>

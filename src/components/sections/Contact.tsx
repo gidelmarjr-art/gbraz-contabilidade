@@ -8,14 +8,16 @@ import { Reveal } from "../ui/Reveal";
  * horário com as informações reais do escritório.
  */
 const CONTACT_INFO = [
-  { icon: Phone, label: "(61) 0000-0000", href: "tel:+556100000000" },
+  { icon: Phone, label: "(99) 98194-6846", href: "tel:+5599981946846" },
+  { icon: Phone, label: "(99) 98417-3115", href: "tel:+5599984173115" },
   {
     icon: Mail,
-    label: "contato@gbrazcontabilidade.com.br",
-    href: "mailto:contato@gbrazcontabilidade.com.br",
+    label: "gidelmarbraz@gmail.com",
+    href: "mailto:gidelmarbraz@gmail.com",
   },
-  { icon: MapPin, label: "Brasília, DF" },
-  { icon: Clock, label: "Seg. a sex., 9h às 18h" },
+  { icon: MapPin, label: "Imperatriz, MA" },
+  { icon: Clock, label: "Seg. a sex., 8h30 às 18h" },
+  { icon: Clock, label: "Sab, 8h30 às 12h" },
 ];
 
 export function Contact() {

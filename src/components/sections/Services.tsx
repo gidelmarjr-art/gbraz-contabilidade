@@ -79,7 +79,7 @@ export function Services() {
           <SectionHeading
             eyebrow="Serviços"
             title="Suporte contábil completo, do CNPJ ao balanço."
-            description="Cada serviço é conduzido pelo mesmo time, para que a sua empresa tenha uma visão única — e não informações espalhadas entre planilhas."
+            description="Cada serviço é conduzido pelo mesmo time, para que a sua empresa tenha uma visão única e não informações espalhadas entre planilhas."
           />
         </Reveal>
 

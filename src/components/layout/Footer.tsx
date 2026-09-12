@@ -21,8 +21,9 @@ const SECTIONS = [
   {
     title: "Contato",
     links: [
-      { name: "contato@gbrazcontabilidade.com.br", href: "mailto:contato@gbrazcontabilidade.com.br" },
-      { name: "(61) 0000-0000", href: "tel:+556100000000" },
+      { name: "gidelmarbraz@gmail.com", href: "mailto:gidelmarbraz@gmail.com" },
+      { name: "(99) 98194-6846", href: "tel:+5599981946846" },
+      { name: "(99) 98417-3115", href: "tel:+5599984173115" },
       { name: "Fale conosco", href: "#contato" },
     ],
   },
