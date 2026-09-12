@@ -14,8 +14,9 @@ const CONTACT_INFO = [
     label: "contato@gbrazcontabilidade.com.br",
     href: "mailto:contato@gbrazcontabilidade.com.br",
   },
-  { icon: MapPin, label: "Brasília, DF" },
-  { icon: Clock, label: "Seg. a sex., 9h às 18h" },
+  { icon: MapPin, label: "Imperatriz, MA" },
+  { icon: Clock, label: "Seg. a sex., 8h às 18h" },
+  { icon: Clock, label: "Sáb., 8h às 12h" },
 ];
 
 export function Contact() {
