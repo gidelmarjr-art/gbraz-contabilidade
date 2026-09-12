@@ -18,7 +18,7 @@ export function About() {
           <div className="overflow-hidden rounded-[2rem] border border-gold-500/25">
             <img
               src={contadorPhoto}
-              alt="Responsável pela G Braz Contabilidade em seu escritório"
+              alt="Responsável pela GBraz Contabilidade em seu escritório"
               className="h-full w-full object-cover [filter:saturate(0.85)_contrast(1.05)]"
             />
             <div
@@ -30,7 +30,7 @@ export function About() {
             />
           </div>
           <div className="absolute -bottom-5 left-1/2 w-[85%] -translate-x-1/2 rounded-2xl border border-cream/10 bg-navy-950/90 px-5 py-3 text-center backdrop-blur-sm">
-            <p className="font-display text-base text-cream">G Braz</p>
+            <p className="font-display text-base text-cream">GIdelmar Braz</p>
             <p className="text-xs text-cream-dim">Contador responsável</p>
           </div>
         </Reveal>
@@ -38,7 +38,7 @@ export function About() {
         <div>
           <Reveal>
             <SectionHeading
-              eyebrow="Sobre a G Braz"
+              eyebrow="Sobre a GBraz Contabilidade"
               title="Contabilidade pensada para apoiar decisões, não só cumprir obrigações."
               description="Acreditamos que contabilidade boa é aquela que se antecipa: que avisa antes do prazo, explica antes de perguntar e traduz números em decisões. É assim que acompanhamos cada cliente, com atenção ao que o seu negócio realmente precisa."
             />
