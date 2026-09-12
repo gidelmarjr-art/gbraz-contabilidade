@@ -8,20 +8,19 @@ import { Reveal } from "../ui/Reveal";
  * horário com as informações reais do escritório.
  */
 const CONTACT_INFO = [
-  { icon: Phone, label: "(99) 98438-1575", href: "tel:+556100000000" },
+  { icon: Phone, label: "(61) 0000-0000", href: "tel:+556100000000" },
   {
     icon: Mail,
     label: "contato@gbrazcontabilidade.com.br",
     href: "mailto:contato@gbrazcontabilidade.com.br",
   },
-  { icon: MapPin, label: "Imperatriz, MA" },
-  { icon: Clock, label: "Seg. a sex., 8h às 18h" },
-  { icon: Clock, label: "Sáb., 8h às 12h" },
+  { icon: MapPin, label: "Brasília, DF" },
+  { icon: Clock, label: "Seg. a sex., 9h às 18h" },
 ];
 
 export function Contact() {
   return (
-    <section id="contato" className="relative bg-navy-950 py-28">
+    <section id="contato" className="relative bg-navy-900 py-28">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.8fr_1fr] lg:gap-24 lg:px-12">
         <Reveal>
           <SectionHeading

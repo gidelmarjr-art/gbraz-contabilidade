@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Reveal } from "../ui/Reveal";
+import { SpotlightCard } from "../ui/SpotlightCard";
+import { Marquee } from "../ui/Marquee";
 
 const SERVICES = [
   {
@@ -48,9 +50,30 @@ const SERVICES = [
   },
 ];
 
+const KEYWORDS = [
+  "Contabilidade Empresarial",
+  "Planejamento Tributário",
+  "Departamento Pessoal",
+  "Abertura de Empresas",
+  "Consultoria Financeira",
+  "Imposto de Renda",
+];
+
 export function Services() {
   return (
     <section id="servicos" className="relative bg-navy-950 py-28">
+      <Marquee
+        className="mb-20 [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]"
+        items={KEYWORDS.map((k) => (
+          <span
+            key={k}
+            className="font-display text-2xl italic text-cream/25 sm:text-3xl"
+          >
+            {k}
+          </span>
+        ))}
+      />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <Reveal>
           <SectionHeading
@@ -63,17 +86,22 @@ export function Services() {
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map(({ icon: Icon, title, description }, i) => (
             <Reveal key={title} delay={(i % 3) * 0.08}>
-              <div className="group h-full rounded-3xl border border-cream/10 bg-gradient-to-b from-navy-900/60 to-navy-900/20 p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-500/40 hover:shadow-[0_20px_50px_-20px_rgba(198,133,56,0.35)]">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-400 transition-colors duration-300 group-hover:bg-gold-500/20">
-                  <Icon size={22} strokeWidth={1.5} />
-                </span>
-                <h3 className="mt-6 font-display text-xl font-medium text-cream">
+              <SpotlightCard className="h-full rounded-3xl border border-cream/10 bg-gradient-to-b from-navy-900/60 to-navy-900/20 p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-500/40 hover:shadow-[0_20px_50px_-20px_rgba(198,133,56,0.35)]">
+                <div className="relative flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-400">
+                    <Icon size={22} strokeWidth={1.5} />
+                  </span>
+                  <span className="font-display text-3xl italic text-cream/10">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="relative mt-6 font-display text-xl font-medium text-cream">
                   {title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+                <p className="relative mt-3 text-sm leading-relaxed text-cream-dim">
                   {description}
                 </p>
-              </div>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>

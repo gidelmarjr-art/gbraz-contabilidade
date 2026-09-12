@@ -41,8 +41,14 @@ const LEGAL_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="bg-navy-900">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12">
+    <footer className="relative overflow-hidden bg-navy-950">
+      <span
+        className="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-display text-[22vw] font-semibold leading-none text-cream/[0.035] sm:text-[16vw]"
+        aria-hidden="true"
+      >
+        G BRAZ
+      </span>
+      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-12">
         <div className="flex flex-col justify-between gap-12 lg:flex-row">
           <div className="flex max-w-sm flex-col gap-5">
             <LogoMark />
