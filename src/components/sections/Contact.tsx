@@ -1,5 +1,5 @@
 import type { FormEvent } from "react";
-import { Clock, ExternalLink, Mail, MapPin } from "lucide-react";
+import { Clock, ExternalLink, Mail} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Button } from "../ui/Button";
@@ -15,16 +15,12 @@ const WHATSAPP_NUMBERS = [
 ];
 
 const WHATSAPP_DEFAULT_MESSAGE =
-  "Olá! Vim pelo site da G Braz Contabilidade e gostaria de mais informações.";
+  "Olá! Vim pelo site da GBraz Contabilidade e gostaria de mais informações.";
 
 function buildWhatsappLink(phone: string, message: string) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
-/**
- * ⚠️ Dados de contato de exemplo — atualize e-mail, endereço e horário
- * com as informações reais do escritório.
- */
 const CONTACT_INFO = [
   ...WHATSAPP_NUMBERS.map(({ label, phone }) => ({
     icon: FaWhatsapp,
