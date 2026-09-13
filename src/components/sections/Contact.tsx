@@ -1,5 +1,5 @@
 import type { FormEvent } from "react";
-import { Clock, ExternalLink, Mail} from "lucide-react";
+import { Clock, ExternalLink, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Button } from "../ui/Button";
@@ -15,12 +15,16 @@ const WHATSAPP_NUMBERS = [
 ];
 
 const WHATSAPP_DEFAULT_MESSAGE =
-  "Olá! Vim pelo site da GBraz Contabilidade e gostaria de mais informações.";
+  "Olá! Vim pelo site da G Braz Contabilidade e gostaria de mais informações.";
 
 function buildWhatsappLink(phone: string, message: string) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
+/**
+ * ⚠️ Dados de contato de exemplo — atualize e-mail, endereço e horário
+ * com as informações reais do escritório.
+ */
 const CONTACT_INFO = [
   ...WHATSAPP_NUMBERS.map(({ label, phone }) => ({
     icon: FaWhatsapp,
@@ -32,7 +36,7 @@ const CONTACT_INFO = [
     label: "gidelmarbraz@gmail.com",
     href: "mailto:gidelmarbraz@gmail.com",
   },
-  { icon: Clock, label: "Seg. a sex., 8h30 às 18h" },
+  { icon: Clock, label: "Seg. a Sex., 8h30 às 18h" },
   { icon: Clock, label: "Sab, 8h30 às 12h" },
 ];
 
@@ -110,7 +114,7 @@ export function Contact() {
               label="E-mail"
               name="email"
               type="email"
-              placeholder="voce@gmail.com"
+              placeholder="voce@empresa.com.br"
             />
             <Field
               label="Telefone"
@@ -142,24 +146,45 @@ export function Contact() {
             description="Veja no mapa como chegar até o nosso escritório."
           />
 
-          <div className="relative mt-10 overflow-hidden rounded-3xl border border-cream/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
-            <a
-              href={MAPS_SHARE_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="absolute left-4 top-4 z-10 flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-xs font-semibold text-navy-950 shadow-md transition-transform hover:-translate-y-0.5"
-            >
-              Maps
-              <ExternalLink size={12} />
-            </a>
+          <div className="relative mt-10 overflow-hidden rounded-3xl border border-cream/10 bg-navy-900/40 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+            <div className="relative">
+              <a
+                href={MAPS_SHARE_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute left-4 top-4 z-10 flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-xs font-semibold text-navy-950 shadow-md transition-transform hover:-translate-y-0.5"
+              >
+                Maps
+                <ExternalLink size={12} />
+              </a>
 
-            <iframe
-              title="Localização da G Braz Contabilidade no mapa"
-              src={MAPS_EMBED_URL}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="h-80 w-full border-0 sm:h-[420px]"
-            />
+              <iframe
+                title="Localização da G Braz Contabilidade no mapa"
+                src={MAPS_EMBED_URL}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-80 w-full border-0 sm:h-[420px]"
+              />
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-5">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-400">
+                  <MapPin size={17} />
+                </span>
+                <span className="text-sm text-cream/90">
+                  G Braz Contabilidade — Imperatriz, MA
+                </span>
+              </div>
+              <a
+                href={MAPS_SHARE_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-semibold text-gold-400 transition-colors hover:text-gold-300"
+              >
+                Abrir no Google Maps →
+              </a>
+            </div>
           </div>
         </div>
       </Reveal>
