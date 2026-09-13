@@ -15,16 +15,12 @@ const WHATSAPP_NUMBERS = [
 ];
 
 const WHATSAPP_DEFAULT_MESSAGE =
-  "Olá! Vim pelo site da G Braz Contabilidade e gostaria de mais informações.";
+  "Olá! Vim pelo site da GBraz Contabilidade e gostaria de mais informações.";
 
 function buildWhatsappLink(phone: string, message: string) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
-/**
- * ⚠️ Dados de contato de exemplo — atualize e-mail, endereço e horário
- * com as informações reais do escritório.
- */
 const CONTACT_INFO = [
   ...WHATSAPP_NUMBERS.map(({ label, phone }) => ({
     icon: FaWhatsapp,
@@ -41,7 +37,7 @@ const CONTACT_INFO = [
 ];
 
 const MAPS_SHARE_URL = "https://maps.app.goo.gl/kkzqbxeHGniGnnwd9";
-const MAPS_ADDRESS_QUERY = "G Braz Contabilidade, Imperatriz - MA";
+const MAPS_ADDRESS_QUERY = "GBraz Contabilidade, Imperatriz - MA";
 const OFFICE_LAT = -5.5199533;
 const OFFICE_LNG = -47.4880498;
 
@@ -159,7 +155,7 @@ export function Contact() {
               </a>
 
               <iframe
-                title="Localização da G Braz Contabilidade no mapa"
+                title="Localização da GBraz Contabilidade no mapa"
                 src={MAPS_EMBED_URL}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -173,7 +169,7 @@ export function Contact() {
                   <MapPin size={17} />
                 </span>
                 <span className="text-sm text-cream/90">
-                  G Braz Contabilidade — Imperatriz, MA
+                  GBraz Contabilidade — Imperatriz, MA
                 </span>
               </div>
               <a

@@ -33,7 +33,6 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-navy-950 pt-24 text-center"
     >
-      {/* Fundo — degradês suaves na paleta navy/dourada */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{

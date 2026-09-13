@@ -8,7 +8,7 @@ const FAQS = [
   {
     question: "Preciso trocar de contador durante o ano fiscal?",
     answer:
-      "Não. A migração pode acontecer a qualquer momento — cuidamos de toda a transição, incluindo a solicitação dos arquivos com o escritório anterior, sem gerar multas ou perda de prazos.",
+      "Não. A migração pode acontecer a qualquer momento cuidamos de toda a transição, incluindo a solicitação dos arquivos com o escritório anterior, sem gerar multas ou perda de prazos.",
   },
   {
     question: "Vocês atendem empresas de qualquer porte?",
