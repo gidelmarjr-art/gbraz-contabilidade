@@ -1,5 +1,5 @@
 import type { FormEvent } from "react";
-import { Clock, Mail, MapPin } from "lucide-react";
+import { Clock, ExternalLink, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Button } from "../ui/Button";
@@ -41,8 +41,32 @@ const CONTACT_INFO = [
 ];
 
 const MAPS_SHARE_URL = "https://maps.app.goo.gl/kkzqbxeHGniGnnwd9";
-const MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=Gbraz+Contabilidade,-5.5199533,-47.4880498&z=17&output=embed";
+const MAPS_ADDRESS_QUERY = "G Braz Contabilidade, Imperatriz - MA";
+const OFFICE_LAT = -5.5199533;
+const OFFICE_LNG = -47.4880498;
+
+// Se você tiver uma chave da Maps Embed API do Google (grátis, mas exige
+// cartão cadastrado no Google Cloud), configure em um arquivo .env:
+//   VITE_GOOGLE_MAPS_EMBED_KEY=sua_chave_aqui
+// Sem chave configurada, o mapa usa o OpenStreetMap como alternativa —
+// 100% gratuito, sem cadastro e sem cartão. O botão "Maps" continua
+// levando para o Google Maps de verdade.
+const GOOGLE_MAPS_EMBED_KEY = import.meta.env.VITE_GOOGLE_MAPS_EMBED_KEY as
+  | string
+  | undefined;
+
+const OFFSET = 0.004;
+const OSM_EMBED_URL = `https://www.openstreetmap.org/export/embed.html?bbox=${
+  OFFICE_LNG - OFFSET
+}%2C${OFFICE_LAT - OFFSET}%2C${OFFICE_LNG + OFFSET}%2C${
+  OFFICE_LAT + OFFSET
+}&layer=mapnik&marker=${OFFICE_LAT}%2C${OFFICE_LNG}`;
+
+const MAPS_EMBED_URL = GOOGLE_MAPS_EMBED_KEY
+  ? `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_EMBED_KEY}&q=${encodeURIComponent(
+      MAPS_ADDRESS_QUERY,
+    )}&zoom=16`
+  : OSM_EMBED_URL;
 
 export function Contact() {
   return (
@@ -115,33 +139,31 @@ export function Contact() {
       </div>
 
       <Reveal delay={0.2}>
-        <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-12">
-          <div className="overflow-hidden rounded-3xl border border-cream/10 bg-navy-900/30">
+        <div id="localizacao" className="mx-auto mt-16 max-w-7xl scroll-mt-28 px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Localização"
+            title="Onde você nos encontra"
+            description="Veja no mapa como chegar até o nosso escritório."
+          />
+
+          <div className="relative mt-10 overflow-hidden rounded-3xl border border-cream/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+            <a
+              href={MAPS_SHARE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute left-4 top-4 z-10 flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-xs font-semibold text-navy-950 shadow-md transition-transform hover:-translate-y-0.5"
+            >
+              Maps
+              <ExternalLink size={12} />
+            </a>
+
             <iframe
-              title="Localização da G Braz Contabilidade no Google Maps"
+              title="Localização da G Braz Contabilidade no mapa"
               src={MAPS_EMBED_URL}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-80 w-full grayscale-[35%] contrast-125 sm:h-96"
+              className="h-80 w-full border-0 sm:h-[420px]"
             />
-            <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-5">
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-400">
-                  <MapPin size={17} />
-                </span>
-                <span className="text-sm text-cream/90">
-                  GBraz Contabilidade — Imperatriz, MA
-                </span>
-              </div>
-              <a
-                href={MAPS_SHARE_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-semibold text-gold-400 transition-colors hover:text-gold-300"
-              >
-                Abrir no Google Maps →
-              </a>
-            </div>
           </div>
         </div>
       </Reveal>
@@ -161,7 +183,7 @@ function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
   const mensagem = String(data.get("mensagem") ?? "").trim();
 
   const linhas = [
-    "Olá! Vim pelo site da GBraz Contabilidade.",
+    "Olá! Vim pelo site da G Braz Contabilidade.",
     nome && `Nome: ${nome}`,
     empresa && `Empresa: ${empresa}`,
     email && `E-mail: ${email}`,

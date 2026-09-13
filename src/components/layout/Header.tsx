@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Serviços", href: "#servicos" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
+  { label: "Localização", href: "#localizacao" },
 ];
 
 export function Header() {
