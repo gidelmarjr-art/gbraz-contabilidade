@@ -63,7 +63,7 @@ export function Hero() {
           <Pill>
             Escritório de contabilidade
             <span className="h-1 w-1 rounded-full bg-gold-400" />
-            Brasília, DF
+            Imperatriz, MA
           </Pill>
         </motion.div>
 
