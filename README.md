@@ -1,32 +1,33 @@
-# React + TypeScript + Vite
+# 📊 Gbraz Contabilidade — Landing Page Institucional
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Landing page profissional desenvolvida para a **Gbraz Contabilidade**, projetada para transmitir autoridade, apresentar serviços contábeis especializados e facilitar a conversão e o contato de novos clientes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Demonstração do Projeto
 
-## React Compiler
+<div align="center">
+  <img src="img/gbraz-contabilidade.png" alt="Capa do Projeto Gbraz Contabilidade" width="100%" />
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Este projeto foi construído utilizando tecnologias modernas de front-end com foco em performance, responsividade e SEO:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+* **Framework/Biblioteca:** React / TypeScript (com Vite)
+* **Estilização:** Tailwind CSS (ou CSS Modularizado)
+* **Ícones:** Lucide React
+* **Hospedagem & Deploy:** Vercel
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## ⚙️ Principais Funcionalidades
+
+* **Design Responsivo:** Layout totalmente adaptado para dispositivos móveis, tablets e desktops.
+* **Apresentação de Serviços:** Seções detalhadas destacando as soluções contábeis oferecidas aos clientes.
+* **Seção de Contato Otimizada:** Canais diretos de comunicação e formulários integrados para captação de leads.
+* **Identidade Visual Consolidada:** Paleta de cores institucional e tipografia alinhada à marca da empresa.
+
+---
