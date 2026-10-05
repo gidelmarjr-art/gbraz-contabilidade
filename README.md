@@ -7,7 +7,7 @@ Landing page profissional desenvolvida para a **Gbraz Contabilidade**, projetada
 ## 📸 Demonstração do Projeto
 
 <div align="center">
-  <img src="img/gbraz-contabilidade.png" alt="Capa do Projeto Gbraz Contabilidade" width="100%" />
+  <img src="gbraz-contabilidade.png" alt="Capa do Projeto Gbraz Contabilidade" width="100%" />
 </div>
 
 ---
